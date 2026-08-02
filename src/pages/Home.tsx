@@ -6,6 +6,8 @@ import { useRouter } from '@/router/Router';
 import { useWishlist } from '@/hooks/useWishlist';
 import ProductCard from '@/components/ProductCard';
 import { SectionHeader } from '@/components/PageBanner';
+import bennerImage from '../public/benner.png';
+
 
 interface HomeProps {
   cart: ReturnType<typeof useCart>;
@@ -47,7 +49,7 @@ export default function Home({ cart, wishlist }: HomeProps) {
         {/* Background image with slow zoom + soft light overlay */}
         <div className="absolute inset-0 overflow-hidden">
           <img
-            src="https://images.pexels.com/photos/6758246/pexels-photo-6758246.jpeg?auto=compress&cs=tinysrgb&w=1600"
+            src={bennerImage}
             alt="Modern living room with rattan chair, potted plant and white ottoman"
             className="w-full h-full object-cover animate-zoom-slow"
           />
@@ -81,8 +83,7 @@ export default function Home({ cart, wishlist }: HomeProps) {
 
         {/* scroll-down hint */}
         <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-10 hidden md:flex flex-col items-center gap-2 text-white/80 animate-fade-in" style={{ animationDelay: '1s' }}>
-          <span className="text-xs uppercase tracking-widest">Scroll</span>
-          <div className="w-px h-10 bg-white/50 animate-pulse" />
+           <div className="w-px h-10 bg-white/50 animate-pulse" />
         </div>
       </section>
 

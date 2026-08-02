@@ -1,3 +1,5 @@
+import logoImage from '../public/furnirologo.png';
+
 interface FurniroLogoProps {
   className?: string;
   iconSize?: number;
@@ -10,6 +12,7 @@ export default function FurniroLogo({ className = '', iconSize = 36, fontSize = 
       {/* Geometric angular 'A' icon — gold/bronze */}
       
       {/* Wordmark — solid black, bold sans-serif */}
+     <img src={logoImage} alt="Furniro Logo"  className="h-8 w-auto object-contain" />
       <span className={`font-bold font-poppins text-[#3A3A3A] leading-none ${fontSize}`}>
         Furniro
       </span>
